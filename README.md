@@ -1,24 +1,9 @@
-# README
+##### How to install
+You need to use Ruby 2.7.2 installed on you system. If you need to install Ruby see [rbenv](https://github.com/rbenv/rbenv) to install it.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Installation:
+```sh
+gem install bundler
+bundle install
+bundle exec rails db:schema:load
+```
