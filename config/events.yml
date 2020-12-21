@@ -1,0 +1,20 @@
+development:
+  - uid: uid12
+    name: "AWS Re:Invent 2020"
+    location: "In the cloud (tm)"
+    start_datetime: 2020-11-30 10:00:00
+    end_datetime: 2020-12-18 20:00:00
+
+  - uid: uid23
+    name: ByteDance App Reveal
+    location: Secret Git place
+    start_datetime: 2020-12-21 10:00:00
+    end_datetime: 2020-12-21 12:30:00
+
+production:
+  - uid: uid1
+    name: "AWS Re:Invent 2020"
+    location: "In the cloud (tm)"
+    start_datetime: 2020-11-30 10:00:00
+    end_datetime: 2020-12-18 20:00:00
+

@@ -1,4 +1,4 @@
-##### How to install
+#### How to install
 You need to use Ruby 2.7.2 installed on you system. If you need to install Ruby see [rbenv](https://github.com/rbenv/rbenv) to install it.
 
 Installation:
@@ -8,6 +8,9 @@ bundle install
 bundle exec rails db:schema:load
 ```
 
+#### Events
+Events for the development and production environments are located in [config/events.yml](config/events.yml). The data for the test environment are in the test folder.
+The data are loaded automatically to the database at boot time.
 
 ### API
 #### List events
