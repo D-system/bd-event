@@ -7,6 +7,6 @@ class EmailValidator < ActiveModel::Validator
 
   REGEX_PATTERN = /^\S+@\S+\.\S+$/
   def email_valid?(email)
-    email =~REGEX_PATTERN
+    email =~ REGEX_PATTERN
   end
 end
