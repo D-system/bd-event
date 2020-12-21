@@ -16,6 +16,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   gem 'pry-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
