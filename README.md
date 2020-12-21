@@ -30,3 +30,9 @@ Output:
    }
 ]
 ```
+
+
+#### Sign up to an event
+Endpoint: POST `/events/<event_uid>/signup.json`
+Parameter: email
+Output: None
