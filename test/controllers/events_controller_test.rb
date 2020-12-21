@@ -4,6 +4,9 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
   test "should get index and retrieve event info" do
     event = FactoryBot.create(:event)
     FactoryBot.create(:event)
+    signup1 = FactoryBot.create(:signup, event: event)
+    signup2 = FactoryBot.create(:signup, event: event)
+
     get events_url, as: :json
     assert_response :success
 
@@ -16,9 +19,6 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     assert_equal(event.location, parsed_event['location'])
     assert_equal(event.start_datetime.as_json, parsed_event['start_datetime'])
     assert_equal(event.end_datetime.as_json, parsed_event['end_datetime'])
-
-    # Signup emails are personal information, they should not appear publicaly
-    assert_nil(parsed_event['signups'])
-    assert_nil(parsed_event['emails'])
+    assert_equal([signup1.email, signup2.email], parsed_event['signed_up_emails'])
   end
 end

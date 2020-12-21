@@ -26,7 +26,8 @@ Output:
       "location":"location4",
       "start_datetime":"2020-12-21T11:25:53.489Z",
       "end_datetime":"2020-12-21T12:25:53.489Z",
-      "url":"http://www.example.com/events/uid4.json"
+      "url":"http://www.example.com/events/uid4.json",
+      "signed_up_emails":["email1@example.com"]
    }
 ]
 ```
