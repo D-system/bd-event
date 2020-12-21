@@ -1,0 +1,11 @@
+development:
+  default_from_address: from_dev@example.com
+  new_signup_notification: new_signup_dev@example.com
+
+test:
+  default_from_address: from_test@example.com
+  new_signup_notification: new_signup_test@example.com
+
+production:
+  default_from_address: from@example.com
+  new_signup_notification: new_signup@example.com

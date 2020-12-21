@@ -35,5 +35,8 @@ module BytedanceDevopsApp
     config.to_prepare do
       load_events_from_config
     end
+
+    config.x.new_signup_notification_email = config_for(:emails)['new_signup_notification']
+    config.x.default_from_address = config_for(:emails)['default_from_address']
   end
 end

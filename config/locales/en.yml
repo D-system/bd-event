@@ -1,3 +1,7 @@
 en:
   record_not_found: "Recource requested not found"
   signup_email_already_exists: "Email alerady signed up for this event"
+  new_signup_notification: "New sign up notification for %{event_name}"
+  new_signup_notification_content: >
+    Hello
+    %{email} just signed up to the event '%{event_name}'.
