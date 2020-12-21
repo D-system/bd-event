@@ -16,5 +16,9 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     assert_equal(event.location, parsed_event['location'])
     assert_equal(event.start_datetime.as_json, parsed_event['start_datetime'])
     assert_equal(event.end_datetime.as_json, parsed_event['end_datetime'])
+
+    # Signup emails are personal information, they should not appear publicaly
+    assert_nil(parsed_event['signups'])
+    assert_nil(parsed_event['emails'])
   end
 end
