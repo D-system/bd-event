@@ -28,4 +28,36 @@ class Events::SignupControllerTest < ActionDispatch::IntegrationTest
     end
     assert_response :unprocessable_entity
   end
+
+  test "should remove email from list" do
+    signup = FactoryBot.create(:signup)
+
+    assert_difference('Signup.count', -1) do
+      delete events_leave_url(event_uid: signup.event.uid, email: signup.email)
+    end
+    assert_response :success
+  end
+
+  test "should remove email from list twice" do
+    signup = FactoryBot.create(:signup)
+
+    assert_difference('Signup.count', -1) do
+      delete events_leave_url(event_uid: signup.event.uid, email: signup.email)
+    end
+    assert_response :success
+
+    assert_no_difference('Signup.count') do
+      delete events_leave_url(event_uid: signup.event.uid, email: signup.email)
+    end
+    assert_response :unprocessable_entity
+  end
+
+  test "should remove email from list on non-existing event" do
+    signup = FactoryBot.create(:signup)
+
+    assert_no_difference('Signup.count') do
+      delete events_leave_url(event_uid: 'fake_uid', email: signup.email)
+    end
+    assert_response :unprocessable_entity
+  end
 end

@@ -36,3 +36,9 @@ Output:
 Endpoint: POST `/events/<event_uid>/signup.json`
 Parameter: email
 Output: None
+
+
+#### Leave an event
+Endpoint: POST `/events/<event_uid>/leave.json`
+Parameter: email
+Output: None
